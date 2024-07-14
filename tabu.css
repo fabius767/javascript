@@ -1,0 +1,33 @@
+body {
+    margin-bottom: 100px;
+    background-color: #0478d6;
+    font: normal 14pt arial;
+}
+
+#title {
+  text-align: center;
+  color: #252323;
+  background-color: #e0eb40;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+#sec {
+  font: normal 17pt arial;
+  background-color: #fff;
+  padding: 15px;
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  margin-top: 40px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../C.ico" type="image/x-icon">
+    <title>Analisador de numeros</title>
+<style>
+    body {
+    margin-bottom: 300px;
+    background-color: #0478d6;
+    font: normal 11pt arial;
+}
+
+  #title {
+   text-align: center;
+   color: #252323;
+   background-color: #f02b2bef;
+   width: 300px;
+   height: 70px;
+   margin: auto;
+   margin-top: 30px;
+   border-radius: 10px;
+}
+
+ #sec {
+   font: normal 15pt arial;
+   background-color: #fff;
+   padding: 15px;
+   margin: auto;
+   width: 500px;
+   margin-bottom: auto;
+   margin-top: 40px;
+   border-radius: 20px;
+}
+
+ footer {
+   color: #fff;
+   text-align: center;
+   margin-top: 40px;
+}
+
+ #select {
+   width: 150px;
+}
+    </style>
+</head>
+<body>
+    <h1 id="title">analisador de <ins>numeros</ins></h1>
+    <section id="sec">
+        <div>
+            <p>Numero (entre 1 e 100) :
+                <input type="number" name="num" id="num"> 
+                <input type="button" value="aplicar" onclick="adicionar()">
+            </p>
+            <select name="sep" id="select" size="10"></select>
+        </div>
+        <p><input type="button" value="finalizar" onclick="clicar()"></p>
+    <div id="res"></div>
+    </section>
+    <footer>&copy; curso em video</footer>
+
+<script>
+    let num = document.getElementById('num')
+    let sell = document.getElementById('select')
+    let res = document.getElementById('res')
+    let valores = []
+
+    function meio(n) {
+        if(Number(n.value) >= 1 && Number(n.value) <= 100) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    function numero(v, n) {
+        if(v.indexOf(Number(n.value)) != -1) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    function adicionar() {
+        if(meio(num.value) && numero(valores, num.value)) {
+            valores.push(Number(num.value))
+            
+        }
+    }
+
+</script>
+</body>
+</html>

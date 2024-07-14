@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../C.ico" type="image/x-icon">
+    <title>Super contador</title>
+<style>
+body {
+    margin-bottom: auto;
+    background-color: #0478d6;
+    font: normal 15pt arial;
+}
+
+#title {
+  text-align: center;
+  color: #252323;
+  background-color: #e27d18;
+  width: 300px;
+  height: 50px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+#sec {
+  
+  font: normal 17pt arial;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 40px;
+  padding: 15px;
+  width: 550px;
+  height: 250px;
+  border-radius: 20px;
+  margin-bottom: auto;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  margin-top: 40px;
+}
+</style>
+</head>
+<body>
+  <h1 id="title">Vamos contar</h1> 
+  <section id="sec">
+   <div id="dados">
+  <p>Inicio: <input type="number" name="comeco" id="start"></p>
+  <p>Fim: <input type="number" name="fim" id="end"></p>
+  <p>Passo: <input type="number" name="pular" id="jump"></p> 
+  </div>
+  <input type="button" id="button" value="Contar" onclick="contar()">
+  <div id=""><p id="msg">Preparando contagem...</p></div>
+  </section>
+  <footer>&copy; Cursoemvideo</footer>
+  
+  <script>
+    let i = document.getElementById('start')
+    let f = document.querySelector('input#end')
+    let t = document.getElementById('jump')
+    let res = document.getElementById('msg')
+    
+
+    function contar () {
+      if(i.value == 0 || f.value == 0 || t.value == 0) {
+        res.innerHTML = `Digite um numero!`
+      } else {
+        res.innerHTML = ''
+        let inicio = Number(i.value)
+        let fim = Number(f.value)
+        let tobu = Number(t.value)
+        for(let c = inicio; c <= fim; c += tobu) {
+          res.innerHTML += `&#x1F449 ${c}`
+        }
+      }
+      res.innerHTML += `&#x1F6A9`
+    }
+  </script>
+</body>
+</html>
